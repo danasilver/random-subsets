@@ -6,11 +6,13 @@ module.exports = function (array, subsetSize) {
   while (array.length >= n) {
     subsets.push(array.splice(0, n));
   }
+
+  // Account for > n remaining elements in array if n doesn't
+  // divide evenly into the array length.
   if (array.length) subsets.push(array);
 
   return subsets;
 };
-
 
 function shuffle(array) {
   var n = array.length, j, temp;
