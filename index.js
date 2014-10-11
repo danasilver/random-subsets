@@ -1,15 +1,16 @@
 module.exports = function (array, subsetSize) {
-  var n = subsetSize || 2,
+  var a = array.slice(),
+      n = subsetSize || 2,
       subsets = [];
-  shuffle(array);
+  shuffle(a);
 
-  while (array.length >= n) {
-    subsets.push(array.splice(0, n));
+  while (a.length >= n) {
+    subsets.push(a.splice(0, n));
   }
 
   // Account for > n remaining elements in array if n doesn't
   // divide evenly into the array length.
-  if (array.length) subsets.push(array);
+  if (a.length) subsets.push(a);
 
   return subsets;
 };

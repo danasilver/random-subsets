@@ -38,4 +38,18 @@ describe('random-subsets', function () {
       });
     });
   });
+
+  describe('preserve original array', function () {
+    it('should clone the array before shuffling to preserve original order', function () {
+      var a = [], i = 10000;
+      while (i--) a.push(i);
+      var sets = subsets(a);
+
+      assert.equal(a.length, 10000);
+      a.forEach(function (n, i, array) {
+        if (i !== 9999) assert.equal(n, array[i + 1] + 1);
+        else assert.equal(n, 0);
+      });
+    });
+  });
 });
