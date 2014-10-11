@@ -1,0 +1,28 @@
+{
+  "name": "random-subsets",
+  "version": "0.0.0",
+  "description": "Create a set of random-ordered subsets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danasilver/random-subsets.git"
+  },
+  "keywords": [
+    "random",
+    "subsets",
+    "pairs",
+    "shuffle"
+  ],
+  "author": "Dana Silver <dsilver@middlebury.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danasilver/random-subsets/issues"
+  },
+  "homepage": "https://github.com/danasilver/random-subsets",
+  "devDependencies": {
+    "mocha": "^1.21.4"
+  }
+}
